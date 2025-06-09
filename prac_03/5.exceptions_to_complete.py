@@ -10,5 +10,6 @@ while not is_finished:
         is_finished = True
     except ValueError:
         print("Please enter a valid integer.")
-
 print("Valid result is:", result)
+
+
