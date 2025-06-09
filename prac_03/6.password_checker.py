@@ -50,6 +50,4 @@ def is_valid_password(password):
         return False
 
     return True
-
-
 main()
