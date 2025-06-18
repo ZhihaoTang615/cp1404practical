@@ -1,7 +1,7 @@
 """
 Emails
 Estimate: 15 minutes
-Actual:
+Actual: 12 minutes
 """
 
 email_to_name = {}
@@ -14,5 +14,7 @@ while email != "":
     email_to_name[email] = name
     email = input("Email: ")
 
+for email, name in email_to_name.items():
+    print(f"{name} ({email})")
 
-print(email_to_name)
+
