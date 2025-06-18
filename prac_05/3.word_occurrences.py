@@ -16,3 +16,6 @@ for word in sorted(word_to_count):
 
 
 
+# Word Occurrences
+# Estimate: 20 minutes
+# Actual:   18 minutes
