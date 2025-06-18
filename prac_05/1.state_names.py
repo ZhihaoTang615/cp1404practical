@@ -2,6 +2,9 @@
 CP1404/CP5632 Practical
 State names in a dictionary
 File needs reformatting
+# state_names
+# Estimate: 15 minutes
+# Actual:   10 minutes
 """
 
 CODE_TO_NAME = {
@@ -27,7 +30,5 @@ while state_code != "":
         print("Invalid short state")
     state_code = input("Enter short state: ")
 
-# state)_names
-# Estimate: 15 minutes
-# Actual:   10 minutes
+
 

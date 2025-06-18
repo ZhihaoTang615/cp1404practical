@@ -1,3 +1,8 @@
+"""
+    # hex_colours
+    # Estimate: 20 minutes
+    # Actual:   15 minutes
+"""
 COLOUR_NAME_TO_HEX = {
     "AbsoluteZero":    "#0048ba",
     "AcidGreen":       "#b0bf1a",
@@ -19,6 +24,3 @@ while colour_name !="":
         print(f"{colour_name} is not a valid colour.")
     colour_name = input("Enter a colour name (or blank to quit): ").title()
 
-    # hex_colours
-    # Estimate: 20 minutes
-    # Actual:   15 minutes
