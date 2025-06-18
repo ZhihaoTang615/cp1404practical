@@ -11,3 +11,10 @@ COLOUR_NAME_TO_HEX = {
     "Aquamarine":      "#7fffd4"
 }
 
+colour_name = input("Enter a colour name (or blank to quit): ").title()
+while colour_name !="":
+    if colour_name in COLOUR_NAME_TO_HEX:
+        print(f"{colour_name} is {COLOUR_NAME_TO_HEX[colour_name]}")
+    else:
+        print(f"{colour_name} is not a valid colour.")
+    colour_name = input("Enter a colour name (or blank to quit): ").title()
