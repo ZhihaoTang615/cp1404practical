@@ -18,3 +18,7 @@ while colour_name !="":
     else:
         print(f"{colour_name} is not a valid colour.")
     colour_name = input("Enter a colour name (or blank to quit): ").title()
+
+    # hex_colours
+    # Estimate: 20 minutes
+    # Actual:   15 minutes
