@@ -19,6 +19,6 @@ James Cook University
 
 ### Useful Resources
 
-- [Programming Patterns on GitHub](https://github.com/CP1404/ProgrammingPatterns)
+- [Programming Patterns on GitHub](https://github.com/ZhihaoTang615/cp1404practical)
 - [CP1404 Practicals Instructions Repo](https://github.com/CP1404/Practicals)
 
