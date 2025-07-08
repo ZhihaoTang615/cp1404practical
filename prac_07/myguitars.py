@@ -1,65 +1,60 @@
 from guitar import Guitar
 
-
 FILENAME = "guitars.csv"
 
-
 def main():
-    """Read and update guitar collection."""
+    """Load guitars from file, allow user to add more, then save to file."""
     guitars = load_guitars(FILENAME)
     print("These are my guitars:")
     display_guitars(guitars)
 
-    # Add new guitars from user input
-    guitars.extend(add_new_guitars())
+    # Let user add new guitars
+    guitars.extend(get_new_guitars())
 
-    # Sort guitars by year (requires __lt__ in Guitar class)
+    # Sort guitars by year
     guitars.sort()
-    print("\nThese are my guitars sorted by year:")
+    print("\nSorted guitars:")
     display_guitars(guitars)
 
-    # Save updated list to file
+    # Save updated list back to file
     save_guitars(FILENAME, guitars)
 
 
 def load_guitars(filename):
-    """Load guitars from CSV file."""
+    """Read guitars from a CSV file and return a list of Guitar objects."""
     guitars = []
-    with open(filename, 'r') as in_file:
-        for line in in_file:
-            name, year, cost = line.strip().split(',')
-            guitar = Guitar(name, int(year), float(cost))
-            guitars.append(guitar)
+    with open(filename, "r") as file:
+        for line in file:
+            name, year, cost = line.strip().split(",")
+            guitars.append(Guitar(name, int(year), float(cost)))
     return guitars
 
 
 def display_guitars(guitars):
-    """Print a list of guitars with index."""
+    """Display a list of guitars."""
     for i, guitar in enumerate(guitars, 1):
         print(f"Guitar {i}: {guitar}")
 
 
-def add_new_guitars():
-    """Ask user to input new guitars, return list of new Guitar objects."""
+def get_new_guitars():
+    """Prompt user for new guitars and return a list of Guitar objects."""
     new_guitars = []
     print("\nAdd new guitars (leave name blank to stop):")
     name = input("Name: ")
     while name:
         year = int(input("Year: "))
-        cost = float(input("Cost: $"))
+        cost = float(input("Cost: "))
         new_guitar = Guitar(name, year, cost)
         new_guitars.append(new_guitar)
-        print(f"{new_guitar} added.\n")
         name = input("Name: ")
     return new_guitars
 
 
 def save_guitars(filename, guitars):
-    """Save all guitars to the CSV file."""
-    with open(filename, 'w') as out_file:
+    """Write the list of Guitar objects to a CSV file."""
+    with open(filename, "w") as file:
         for guitar in guitars:
-            print(f"{guitar.name},{guitar.year},{guitar.cost}", file=out_file)
+            file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
 
 
-if __name__ == "__main__":
-    main()
+main()
