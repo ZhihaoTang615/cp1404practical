@@ -31,3 +31,5 @@ class SquareNumberApp(App):
 
 
 SquareNumberApp().run()
+
+
